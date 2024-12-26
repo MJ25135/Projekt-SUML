@@ -7,10 +7,14 @@ from sklearn.model_selection import train_test_split
 from tpot import TPOTRegressor
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('data/student-mat.csv')
+df = pd.read_csv('../data/student-mat.csv')
 print(df.head)
 
-columns_to_keep = ['G1', 'G2', 'G3', 'failures', 'studytime', 'age', 'absences', 'Medu', 'Fedu', 'health', 'school']
+# columns_to_keep = ['G1', 'G2', 'G3', 'failures', 'studytime', 'age', 'absences', 'Medu', 'Fedu', 'health', 'school']
+columns_to_keep = ['sex', 'address', 'Pstatus', 'absences', 'traveltime', 'studytime', 'schoolsup', 'famsup',
+                   'activities', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc',
+                   'health', 'G3']
+
 df = df[columns_to_keep]
 
 print("Remaining columns:", df.columns)
