@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('../data/student-mat.csv')
 print(df.head)
 
-# columns_to_keep = ['G1', 'G2', 'G3', 'failures', 'studytime', 'age', 'absences', 'Medu', 'Fedu', 'health', 'school']
 columns_to_keep = ['sex', 'age', 'address', 'Pstatus', 'absences', 'traveltime', 'studytime', 'schoolsup', 'famsup',
                    'activities', 'paid', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc',
                    'health', 'G3']
