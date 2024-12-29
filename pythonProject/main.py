@@ -11,8 +11,8 @@ df = pd.read_csv('../data/student-mat.csv')
 print(df.head)
 
 # columns_to_keep = ['G1', 'G2', 'G3', 'failures', 'studytime', 'age', 'absences', 'Medu', 'Fedu', 'health', 'school']
-columns_to_keep = ['sex', 'address', 'Pstatus', 'absences', 'traveltime', 'studytime', 'schoolsup', 'famsup',
-                   'activities', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc',
+columns_to_keep = ['sex', 'age', 'address', 'Pstatus', 'absences', 'traveltime', 'studytime', 'schoolsup', 'famsup',
+                   'activities', 'paid', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc',
                    'health', 'G3']
 
 df = df[columns_to_keep]
@@ -24,9 +24,9 @@ df['school'] = df['school'].map({'GP': 0, 'MS': 1})
 df = df.dropna()
 
 X = df.drop('G3', axis=1)  
-y = df['G3']  
+Y = df['G3']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
 
 tpot = TPOTRegressor(generations=5, population_size=50, verbosity=2, random_state=42)
 tpot.fit(X_train, y_train)
