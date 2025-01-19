@@ -1,16 +1,28 @@
-# Projekt-SUML
--main.ipynb tam odbywa sie czysczenie, akutalnie (nie uzywane)
 
--tpot_best_pipeline eksportowany najlepszy model (nie uzywane)
 
--main.py to samo co w jupyterze, trenowany model przeniesiony do pliku pkl, który jest wykorzystywany przez strimlit potem
+# Predykcja Ocen Końcowych z Matematyki
 
--strimlit.py frontend
+Ten projekt przewiduje końcowe oceny uczniów z matematyki (`G3`) na podstawie danych socjodemograficznych i edukacyjnych. Aplikacja umożliwia wprowadzanie szczegółowych informacji o uczniu oraz uzyskanie przewidywanej oceny.
 
-TODO:
+---
 
-Trzeba się zastanowić czy te parametry są okej możesz je łatwo podmienić jak uważasz się są inne lepsze.
+## Struktura Projektu
 
-deploy tego dziadostawa
+- **`data/student-mat.csv`**:  
+  Zawiera zbiór danych używany do trenowania i ewaluacji modelu. Dane obejmują informacje o demografii uczniów, środowisku rodzinnym, nawykach naukowych i ocenach.  
 
-dokumentacja
+- **`app.py`**:  
+  Frontend aplikacji oparty na Streamlit. Udostępnia przyjazny interfejs użytkownika do wprowadzania danych i wyświetlania przewidywanej oceny końcowej.
+
+- **`model.py`**:  
+  Implementacja modelu uczenia maszynowego przy użyciu Random Forest Regressor. Zawiera kroki przetwarzania danych, trenowanie modelu, ewaluację oraz logikę predykcji.
+
+---
+
+## Kluczowe Funkcje
+
+- Predykcja końcowych ocen z matematyki na podstawie wprowadzonych danych.
+- Wyświetlanie metryk jakości modelu (MAE, MSE, R² Score).
+- Prosty i intuicyjny interfejs internetowy do wprowadzania danych i wyświetlania wyników.
+
+---
