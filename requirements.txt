@@ -1,4 +1,5 @@
 streamlit
+scikit-learn
 matplotlib
 google-cloud-aiplatform
 google-cloud-logging
