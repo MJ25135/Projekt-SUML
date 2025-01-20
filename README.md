@@ -15,7 +15,7 @@ Ten projekt przewiduje końcowe oceny uczniów z matematyki (`G3`) na podstawie 
   Frontend aplikacji oparty na Streamlit. Udostępnia przyjazny interfejs użytkownika do wprowadzania danych i wyświetlania przewidywanej oceny końcowej.
 
 - **`data_preparation.py`**:  
-  Zawiera kroki przetwarzania i przygotowania danych
+  Zawiera kroki przetwarzania i przygotowania danych.
 
 - **`model.py`**:  
   Implementacja modelu uczenia maszynowego przy użyciu Random Forest Regressor. Zawiera kroki przetwarzania danych, trenowanie modelu, ewaluację oraz logikę predykcji.
