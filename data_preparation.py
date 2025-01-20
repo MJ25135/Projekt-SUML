@@ -3,7 +3,7 @@ import pandas as pd
 
 class DataPreparation:
     def __init__(self):
-        self.data = pd.read_csv('../data/student-mat.csv')
+        self.data = pd.read_csv('student-mat.csv')
 
     def load_dataset(self):
         columns_to_keep = [
