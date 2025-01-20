@@ -4,7 +4,6 @@ from model import Model
 
 # Prepare model
 def prepare_model(model):
-    model.load_dataset()
     model.train()
 
 options = {
